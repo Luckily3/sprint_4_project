@@ -1,4 +1,4 @@
-package ru.yandex.praktikum.pageObject;
+package ru.yandex.praktikum.pageobject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -55,13 +55,6 @@ public class HomePageScooter {
     return this;
   }
 
-  //метод принятия куки
-  public HomePageScooter clickMiddleOrderButton() {
-    driver.findElement(middleOrderButton).click();
-    return this;
-  }
-
-
 
   //метод прокрутки к разделу «Вопросы о важном»
   public HomePageScooter scrollToQuestions() {
@@ -84,17 +77,23 @@ public class HomePageScooter {
     ));
   }
 
+  // метод нажатия на кнопку «Заказать» (вверху страницы)
   public HomePageScooter clickHeaderOrderButton() {
     driver.findElement(headerOrderButton).click();
     return this;
   }
 
+  // метод кнопку «Заказать»  (внизу страницы)
+  public HomePageScooter clickMiddleOrderButton() {
+    driver.findElement(middleOrderButton).click();
+    return this;
+  }
+
+  //метод принятия куки
   public HomePageScooter clickCookieButton() {
     driver.findElement(cookieButton).click();
     return this;
   }
-
-
 
 
 }

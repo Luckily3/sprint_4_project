@@ -1,4 +1,4 @@
-package ru.yandex.praktikum.Tests;
+package ru.yandex.praktikum.tests;
 
 import org.junit.*;
 import org.junit.runner.RunWith;
@@ -6,16 +6,16 @@ import org.junit.runners.Parameterized;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import ru.yandex.praktikum.pageObject.HomePageScooter;
+import ru.yandex.praktikum.pageobject.HomePageScooter;
 
 import static org.junit.Assert.assertEquals;
-import static ru.yandex.praktikum.pageObject.constants.HomeFAQ.*;
+import static ru.yandex.praktikum.pageobject.constants.HomeFAQ.*;
+import static ru.yandex.praktikum.pageobject.constants.ScooterURL.*;
 
 
 @RunWith(Parameterized.class) //аннотация параметризованного теста
 public class HomeFAQTest {
   private static WebDriver driver;
-  private static final String url = "https://qa-scooter.praktikum-services.ru";
   private final By question;
   private final By answer;
   private final By result;
@@ -45,7 +45,7 @@ public class HomeFAQTest {
   @BeforeClass
   public static void startUp() {
     driver = new ChromeDriver();
-    driver.get(url);
+    driver.get(URL);
   }
 
   @Test

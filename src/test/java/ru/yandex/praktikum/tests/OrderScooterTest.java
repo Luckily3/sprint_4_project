@@ -1,4 +1,4 @@
-package ru.yandex.praktikum.Tests;
+package ru.yandex.praktikum.tests;
 
 
 import org.junit.After;
@@ -8,24 +8,23 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import ru.yandex.praktikum.pageObject.HomePageScooter;
-import ru.yandex.praktikum.pageObject.OrderScooterPage;
-import ru.yandex.praktikum.pageObject.OrderUserPage;
-import ru.yandex.praktikum.pageObject.OrderConfirm;
+import ru.yandex.praktikum.pageobject.HomePageScooter;
+import ru.yandex.praktikum.pageobject.OrderScooterPage;
+import ru.yandex.praktikum.pageobject.OrderUserPage;
+import ru.yandex.praktikum.pageobject.OrderConfirm;
 
 
 import static org.junit.Assert.assertTrue;
-import static ru.yandex.praktikum.pageObject.constants.RentDuration.*;
-import static ru.yandex.praktikum.pageObject.constants.ScooterColour.*;
+import static ru.yandex.praktikum.pageobject.constants.RentDuration.*;
+import static ru.yandex.praktikum.pageobject.constants.ScooterColour.*;
+import static ru.yandex.praktikum.pageobject.constants.ScooterURL.*;
 
 
 
 @RunWith(Parameterized.class)
 public class OrderScooterTest {
   private WebDriver driver;
-  private final String url = "https://qa-scooter.praktikum-services.ru/";
   private final String name;
   private final String surname;
   private final String address;
@@ -69,7 +68,7 @@ public class OrderScooterTest {
   @Before
   public void startUp() {
       driver = new FirefoxDriver();
-      driver.get(url);
+      driver.get(URL);
   }
 
   @After

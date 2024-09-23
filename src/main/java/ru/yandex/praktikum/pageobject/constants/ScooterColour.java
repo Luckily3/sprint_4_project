@@ -1,4 +1,4 @@
-package ru.yandex.praktikum.pageObject.constants;
+package ru.yandex.praktikum.pageobject.constants;
 
 import org.openqa.selenium.By;
 
